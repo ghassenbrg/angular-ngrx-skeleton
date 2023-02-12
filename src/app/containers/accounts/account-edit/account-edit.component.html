@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="mt-4">
+      <h3>Edit Account</h3>
+      <form [formGroup]="accountForm" (submit)="updateAccount()" class="form-inline mb-4">
+    
+        <label class="sr-only" for="Name">Firstname</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <input type="text" class="form-control" formControlName="firstname" placeholder="Firstname">
+        </div>
+    
+        <label class="sr-only" for="Phone">Lastname</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <input type="text" class="form-control" formControlName="lastname" placeholder="Lastname">
+        </div>
+    
+        <label class="sr-only" for="Address">Email</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <input type="text" class="form-control" formControlName="email" placeholder="Email">
+        </div>
+    
+        <button type="submit" class="btn btn-dark mb-2">Update Account</button>
+      </form>
+  </div>
+</div>

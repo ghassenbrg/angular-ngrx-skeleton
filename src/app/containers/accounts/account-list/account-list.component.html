@@ -1,0 +1,28 @@
+<div class="content">
+  <h3>Account</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">Firstname</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5" class="alert alert-danger" *ngIf="error$ | async as error">{{error}}</td>
+        </tr>
+        <tr *ngFor="let account of (accounts$ | async)">
+          <th scope="row">{{account.firstname}}</th>
+          <td>{{account.lastname}}</td>
+          <td>{{account.email}}</td>
+          <th>
+            <a (click)=editAccount(account)>edit</a>
+            <br>
+            <a (click)=deleteAccount(account)>delete</a>
+          </th>
+        </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<div class="content">
+    <h3>Add New Account</h3>
+
+    <form [formGroup]="accountForm" (submit)="createAccount()" class="form-inline mb-4">
+    <label class="sr-only" for="Name">Firstname</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <input type="text" class="form-control" formControlName="firstname" placeholder="Firstname">
+    </div>
+
+    <label class="sr-only" for="Phone">lastname</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <input type="text" class="form-control" formControlName="lastname" placeholder="Lastname">
+    </div>
+
+    <label class="sr-only" for="Address">email</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <input type="text" class="form-control" formControlName="email" placeholder="Email">
+    </div>
+
+    <button type="submit" class="btn btn-dark mb-2">Add Account</button>
+    </form>
+</div>
